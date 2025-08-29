@@ -40,7 +40,7 @@ Options:
 ### Adaptive Ethers Client
 
 ```bash
-./target/release/ZamaAssignment --adpetherrs --start-block 15000000 --end-block 15150000 --rpc-url "https://eth-mainnet.g.alchemy.com/v2/API_KEY" --contract-address --adpetherrs "0xdac17f958d2ee523a2206206994597c13d831ec7" --database "historical_indexing.db"
+./target/release/ZamaAssignment --adpetherrs --start-block 15000000 --end-block 15150000 --rpc-url "https://eth-mainnet.g.alchemy.com/v2/API_KEY" --contract-address "0xdac17f958d2ee523a2206206994597c13d831ec7" --database "historical_indexing.db"
 ```
 
 **Command Breakdown:**
