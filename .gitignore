@@ -1,0 +1,24 @@
+# Rust build artifacts
+/target
+
+# Database files
+*.db
+*.db-*
+
+# Log files
+*.log
+logs/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
