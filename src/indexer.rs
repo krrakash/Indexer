@@ -1439,7 +1439,7 @@ impl Indexer {
             while let Some(block_data) = receiver.recv().await {
                 let block_number = block_data.block_number;
                 
-                // Skip blocks before the configured start block
+                
                 if self.config.start_block > 0 && block_number < self.config.start_block {
                     info!("Skipping block {} (before start block {})", block_number, self.config.start_block);
                     continue;
@@ -1472,7 +1472,7 @@ impl Indexer {
                
                 let expected_block = last_processed_block + 1;
                 
-                // Only detect gaps if we're not starting fresh (last_processed_block > 0)
+               
                 if block_number > expected_block && last_processed_block > 0 {
                     info!("Critical gap detected: blocks {} to {}", expected_block, block_number.saturating_sub(1));
                     info!("Starting gap backfill for {} blocks", block_number.saturating_sub(expected_block));
@@ -1513,7 +1513,7 @@ impl Indexer {
                     }
                 }
                 
-                // Process the block
+                
                 self.process_live_block_with_verification(block_data).await?;
                 last_processed_block = block_number;
             }
