@@ -353,7 +353,7 @@ impl Indexer {
                     self.write_queue.update_progress(gap_end, progress.total_events_processed + events_processed)?;
                     info!("Progress updated: last_processed_block = {}, total_events = {}", gap_end, progress.total_events_processed + events_processed);
                     
-                    // Now verify continuity after gaps are filled
+                    
                     debug!("Checking continuity at boundary: historical block {} - gap block {}", historical_end, gap_start);
                     let continuity_ok = self.verify_realtime_continuity(gap_start).await?;
                     if !continuity_ok {
